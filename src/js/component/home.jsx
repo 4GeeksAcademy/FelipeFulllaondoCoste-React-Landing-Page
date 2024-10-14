@@ -4,6 +4,7 @@ import React from "react";
 //import rigoImage from "../../img/rigo-baby.jpg";
 import NavBar from "./NavBar";
 import Jumbotron from "./Jumbotron";
+import Card from "./card";
 
 
 //create your first component
@@ -12,6 +13,7 @@ const Home = () => {
 		<div>
 			<NavBar />
 			<Jumbotron />
+			<Card />
 		</div>
 
 	);
