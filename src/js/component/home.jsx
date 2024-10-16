@@ -5,16 +5,32 @@ import React from "react";
 import NavBar from "./NavBar";
 import Jumbotron from "./Jumbotron";
 import Card from "./card";
+import Footer from "./Footer";
+import { cardContent } from "./cardContent";
+import './styles.css'
 
 
 //create your first component
 const Home = () => {
 	return (
-		<div>
+		<>
 			<NavBar />
+
 			<Jumbotron />
-			<Card />
-		</div>
+
+			<div id="cardContainer" className="container d-flex flex-wrap gap-3 p-0 my-4 justify-content-between">
+				{cardContent.map(content => (
+					<Card 
+						key={content.id}
+						image={content.image}
+						title={content.title}
+						body={content.body}
+					/>
+				))}
+			</div>
+
+			<Footer />
+		</>
 
 	);
 };
